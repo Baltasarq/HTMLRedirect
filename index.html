@@ -1,0 +1,26 @@
+<!DOCType html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="refresh" content="0; url=${url}" />
+        <title>${title}</title>
+    </head>
+    <body>
+        <h1>${title}</h1>
+        Pulsa para <a href="${url}">redirigirte al juego</a>.
+
+        <script>
+            window.onload = (event) => {
+                let title = "Microsoft";
+                let url = "https:www.microsoft.com";
+
+                document.body.innerHTML = document.body.innerHTML
+                                            .replace( "${title}", title )
+                                            .replace( "${url}", url );
+                document.head.innerHTML = document.head.innerHTML
+                                            .replace( "${title}", title )
+                                            .replace( "${url}", url );
+            };
+        </script>
+    </body>
+</html>
